@@ -84,3 +84,43 @@ from datetime import time, date
 # time_2 = time_1.replace(minute=50)
 #
 # print(date_1, date_2, time_1, time_2, sep='\n')
+
+### --------- библиотека os ------------- библиотека os -------------
+import os
+#
+# """ вызов тип нашей системы """
+# print(os.name)
+#
+# """ название нашей директории """
+# print(os.getcwd()) # --> /home/user/urban_conty/Web
+#
+# """ смена рабочей директории """
+# os.chdir('/home/user/urban_conty')
+# print(os.getcwd()) # --> /home/user/urban_conty
+# os.chdir('/home/user/urban_conty/Web') # вернемся обратно в нашу рабочую директорию
+# print(os.getcwd()) # --> /home/user/urban_conty/Web
+#
+# """ проверка существования пути """
+# print(os.path.exists('/home/user/urban_conty/poetry.lock')) # --> True
+# print(os.path.exists('home/user/urban_conty/test_1.txt')) # --> False
+#
+# """ получение полного (абсолютного) пути """
+# print(os.path.abspath("pyprojecr.md")) # --> /home/user/urban_conty/Web/pyprojecr.md
+#
+# """ проверка является ли файл файлом """
+# print(os.path.isfile("/home/user/urban_conty/Web/test.txt") # --> True (файл test.txt создали предворительно в ручную)
+#
+# """ проверка директории """
+# print(os.path.isdir("/home/user/urban_conty/Web"))
+# print(os.path.isdir("/home/user/urban_conty"))
+#
+# """ создание новой директории """
+# os.mkdir("/home/user/urban_conty/Web/Dir_1") # директория создалась по указанному пути
+#
+# """ удаление файла test.txt"""
+# os.remove("/home/user/urban_conty/Web/test.txt") # файл test.txt удален
+#
+# """ удаление папки, каталога, директории """
+# os.rmdir("/home/user/urban_conty/Web/Dir_1") # удалили директорию
+os.rmdir("/home/user/test_05_1")
+
