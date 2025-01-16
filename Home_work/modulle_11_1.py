@@ -1,41 +1,41 @@
-# import pandas as pd
-#
-# """ чтение данных из CSV файла """
-# data = pd.read_csv('data.csv')
-#
-# """ вывод всего файла """
-# print(data)
-#
-# """ вывод первых 5 строк """
-# print(data.head())
-#
-#
-# """ вывод средней цены товара """
-# mean_unit_price = data['unit_price'].mean()
-# print(f'Среднее значение: {mean_unit_price}')
-#
-#
-# """ фильтрация данных: вывод строк, где цена товара меньше 10 """
-# filtered_data = data[data['unit_price'] < 10]
-# print(filtered_data)
-#
-# ### ---------------------------------------
-# import numpy as np
-#
-# """ создание массива """
-# array = np.array([1, 2, 3, 4, 5])
-#
-# """ возведение элементов массива в квадрат """
-# squared = array ** 2
-# print(f'Квадраты элементов: {squared}')
-#
-# """ сумма элементов массива """
-# sum_array = np.sum(array)
-# print(f'Сумма элементов: {sum_array}')
-#
-# """ среднее значение массива """
-# mean_array = np.mean(array)
-# print(f'Среднее значение: {mean_array}')
+import pandas as pd
+
+""" чтение данных из CSV файла """
+data = pd.read_csv('data.csv')
+
+""" вывод всего файла """
+print(data)
+
+""" вывод первых 5 строк """
+print(data.head())
+
+
+""" вывод средней цены товара """
+mean_unit_price = data['unit_price'].mean()
+print(f'Среднее значение: {mean_unit_price}')
+
+
+""" фильтрация данных: вывод строк, где цена товара меньше 10 """
+filtered_data = data[data['unit_price'] < 10]
+print(filtered_data)
+
+### ---------------------------------------
+import numpy as np
+
+""" создание массива """
+array = np.array([1, 2, 3, 4, 5])
+
+""" возведение элементов массива в квадрат """
+squared = array ** 2
+print(f'Квадраты элементов: {squared}')
+
+""" сумма элементов массива """
+sum_array = np.sum(array)
+print(f'Сумма элементов: {sum_array}')
+
+""" среднее значение массива """
+mean_array = np.mean(array)
+print(f'Среднее значение: {mean_array}')
 
 ### ------------------------------------------
 import matplotlib.pyplot as plt
