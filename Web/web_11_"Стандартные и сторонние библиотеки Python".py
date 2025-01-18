@@ -87,6 +87,8 @@ from datetime import time, date
 
 ### --------- библиотека os ------------- библиотека os -------------
 import os
+from pprint import pprint
+
 #
 # """ вызов тип нашей системы """
 # print(os.name)
@@ -122,5 +124,5 @@ import os
 #
 # """ удаление папки, каталога, директории """
 # os.rmdir("/home/user/urban_conty/Web/Dir_1") # удалили директорию
-os.rmdir("/home/user/test_05_1")
+# os.rmdir("/home/user/test_05_1")
 

@@ -27,10 +27,10 @@ func = some_function
 
 ### пример 1 - Атрибут класса __name__
 
-# print(some_function.__name__)
-# print(SomeClass.__name__)
-# print(requests.__name__)
-# print(func.__name__)
+print(some_function.__name__)
+print(SomeClass.__name__)
+print(requests.__name__)
+print(func.__name__)
 # print(some_string.__name__)
 # print(some_object.__name__)
 
@@ -82,12 +82,57 @@ from pprint import pprint
 # print(isinstance(some_object, SomeClass))
 
 ### пример 7 - модуль inspect - https://docs.python.org/3/library/inspect.html - этот модуль собирает удобные методы и классы для отображения интроспективной информации
-import inspect
-### самые употребляемые функции
-# print(inspect.ismodule(requests))
-# print(inspect.isclass(requests))
-# print(inspect.isfunction(requests))
-# print(inspect.isbuiltin(requests))
+# import inspect
+# ### самые употребляемые функции
+# # print(inspect.ismodule(requests))
+# # print(inspect.isclass(requests))
+# # print(inspect.isfunction(requests))
+# # print(inspect.isbuiltin(requests))
+#
+# some_function_module = inspect.getmodule(some_function)
+# print(type(some_function_module), some_function_module)
 
-some_function_module = inspect.getmodule(some_function)
-print(type(some_function_module), some_function_module)
+### ----- системный пакет sys ------------------- системный пакет sys ------------
+import sys
+# pprint(dir(sys))
+#
+# """ путь к интерпретатору Python """
+# print(sys.executable)  # --> /home/user/.cache/pypoetry/virtualenvs/urban-conty-AyrHHL5T-py3.12/bin/python
+#
+# """ на какой операционной системе работаем """
+# print(sys.platform)  # --> linux
+#
+# """ текущая версия Python """
+# print(sys.version) # --> 3.12.3 (main, Nov  6 2024, 18:32:19) [GCC 13.2.0]
+# print(sys.version_info) # --> sys.version_info(major=3, minor=12, micro=3, releaselevel='final', serial=0)
+#
+# """ функция для отлова и сравнения версии """
+# def func(x):
+#     if sys.version.split(' ')[0] == '3.12.3':
+#         return x + 10
+#     else:
+#         raise Exception('Недопустимая версия')
+#
+# print(func(10))
+#
+# """ список, содержащий параметры командной строки, если она была задана """
+# print(sys.argv) # --> ['/home/user/urban_conty/Web/web_11_"Стандартные и сторонние библиотеки Python".py']
+#
+# """ путь поиска модуля, список каталогов, в которых Python будет искать модули во время импорта """
+# print(sys.path) # --> ['/home/user/urban_conty/Web', '/home/user/urban_conty', '/usr/lib/python312.zip', '/usr/lib/python3.12', '/usr/lib/python3.12/lib-dynload', '/home/user/.cache/pypoetry/virtualenvs/urban-conty-AyrHHL5T-py3.12/lib/python3.12/site-packages']
+#
+# """ словарь, который отображает имена модулей в объекты модулей для всех загруженных в текущий момент модулей """
+# print(sys.modules)
+#
+# """ __builtins__ - псевдо-модуль, содержащий встроенные в интерпретатор объекты (константы, исключения, функции)"""
+# # print(__builtins__) # --> <module 'builtins' (built-in)>
+# pprint(dir(__builtins__))
+
+""" sys используется не только для того, чтобы узнать новую информацию """
+def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+print(factorial(5))
