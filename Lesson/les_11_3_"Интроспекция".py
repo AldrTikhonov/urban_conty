@@ -4,6 +4,7 @@ import requests
 # # help(requests.get)
 
 ### --------------------------
+
 some_string = 'i am a string'
 some_number = 42
 some_list = [some_string, some_number]
