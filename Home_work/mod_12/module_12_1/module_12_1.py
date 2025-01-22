@@ -1,4 +1,4 @@
-from runner import Runner
+from Home_work.mod_12.module_12_2.runner import Runner
 import unittest
 
 
