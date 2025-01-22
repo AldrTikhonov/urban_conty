@@ -9,11 +9,9 @@ print(data)
 """ вывод первых 5 строк """
 print(data.head())
 
-
 """ вывод средней цены товара """
 mean_unit_price = data['unit_price'].mean()
 print(f'Среднее значение: {mean_unit_price}')
-
 
 """ фильтрация данных: вывод строк, где цена товара меньше 10 """
 filtered_data = data[data['unit_price'] < 10]
